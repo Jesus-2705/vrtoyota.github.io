@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Modelo 3D</title>
+    <!-- Importa A-Frame -->
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+</head>
+<body>
+    <h1 style="text-align:center;">Mi Modelo 3D</h1>
+
+    <a-scene>
+        <!-- Cámara -->
+        <a-entity camera look-controls position="0 1.6 3"></a-entity>
+
+        <!-- Luz -->
+        <a-entity light="type: ambient; color: #FFF"></a-entity>
+        <a-entity light="type: directional; intensity: 0.5" position="0 1 1"></a-entity>
+
+        <!-- Modelo 3D -->
+        <a-entity 
+            gltf-model="2022_toyota_gr86.glb" 
+            scale="100 100 100"
+            position="0 0 -2"
+            rotation="0 0 0">
+        </a-entity>
+
+        <!-- Suelo opcional -->
+        <a-plane rotation="-90 0 0" width="10" height="10" color="#7BC8A4"></a-plane>
+    </a-scene>
+</body>
+</html>
